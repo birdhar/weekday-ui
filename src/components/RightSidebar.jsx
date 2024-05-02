@@ -2,7 +2,7 @@ import style from "./Style.module.css";
 
 function RightSidebar() {
   return (
-    <sidebar className={`${style.sidebar} ${style.rightsidebar}`}>
+    <aside className={`${style.sidebar} ${style.rightsidebar}`}>
       <div className={style.sidebarright}>
         <img className={style.avatar} src="/images/user.png" alt="user" />
 
@@ -20,7 +20,7 @@ function RightSidebar() {
           </div>
         </div>
       </div>
-    </sidebar>
+    </aside>
   );
 }
 

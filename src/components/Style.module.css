@@ -1,3 +1,5 @@
+/* Here I put all the styles in this single file.( There could be in diferent css files).  */
+
 .sidebar {
   width: 100px;
   position: fixed;
@@ -115,7 +117,7 @@ nav p {
 
 .jobscontainer {
   margin-top: 5rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
   width: calc(100% - 250px);
   box-sizing: border-box;
   margin-right: 125px;
@@ -141,23 +143,29 @@ nav p {
 .inputcontainer {
   display: flex;
   align-items: center;
+  outline: #323232;
   border: 0.1px solid rgb(215, 213, 213);
   width: fit-content;
   gap: 0.5rem;
+  position: relative;
   padding: 0.4rem 0.8rem;
   border-radius: 0.2rem;
+}
+.inputcontainer:focus {
+  border: 0.1px solid rgb(159, 181, 219);
 }
 .input {
   border: none;
   outline: none;
   padding: 0;
-  /* border-right: 0.1px solid gray; */
+  text-transform: capitalize;
 }
 .inputcontainer svg {
   margin-bottom: 0;
 }
 .filters {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
 }
@@ -176,10 +184,11 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-top: 3rem;
 }
 .jobcard {
-  border: 0.1px solid rgb(211, 207, 207);
+  border: 0.1px solid rgb(238, 235, 235);
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   padding: 1rem;
+  position: relative;
 }
 .jobcardinfo {
   display: flex;
@@ -210,6 +219,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 0.8rem !important;
   font-weight: 500 !important;
   margin-top: 2px !important;
+  text-transform: capitalize;
 }
 .jobcardcontent {
   margin-top: 3rem;
@@ -221,6 +231,126 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #323232;
 }
 .description {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 400;
+  position: relative;
+}
+.description::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1) 90%
+  );
+  pointer-events: none;
+}
+.ref {
+  height: 4rem;
+}
+.jobcompany,
+.jobrole {
+  text-transform: capitalize;
+}
+.viewjob {
+  color: rgb(73, 67, 218);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.seemore {
+  color: rgb(73, 192, 120);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.floatdiv {
+  position: absolute;
+  left: 0;
+  bottom: 27%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  top: 2.4rem;
+  background-color: #fff;
+  z-index: 10;
+  width: 100%;
+  border: 0.1px solid rgb(215, 213, 213);
+  max-height: 15rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.dropdownitem {
+  width: 100%;
+  border-bottom: 0.1px solid rgb(244, 239, 239);
+  padding: 0.1rem 0.2rem;
+  color: #757575;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.selectedval {
+  text-transform: capitalize;
+  background-color: #eae9e9;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.1rem 0.2rem;
+}
+.close {
+  height: 0.75rem;
+  width: 0.75rem;
+  cursor: pointer;
+}
+.applybtn {
+  margin-top: 1rem;
+  display: grid;
+  place-items: center;
+  background-color: rgb(85, 239, 196);
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+@media only screen and (max-width: 1180px) {
+  .jobs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .jobs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (max-width: 580px) {
+  .rightsidebar {
+    display: none;
+  }
+
+  .sidebar {
+    width: 50px;
+  }
+
+  .jobscontainer {
+    padding-right: 0;
+    width: calc(100% - 110px);
+    box-sizing: content-box;
+    margin-right: 125px;
+    margin-left: 70px;
+  }
+  nav {
+    width: calc(100% - 90px);
+    margin-left: 80px;
+  }
 }
