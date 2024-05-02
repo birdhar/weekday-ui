@@ -1,0 +1,226 @@
+.sidebar {
+  width: 100px;
+  position: fixed;
+  top: 0;
+
+  bottom: 0;
+  border-radius: 12px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.leftsidebar {
+  left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.rightsidebar {
+  right: 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgb(187, 252, 234);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.logo {
+  height: 2.6rem;
+  border-radius: 50%;
+}
+.leftItems {
+  /* width: 100%; */
+  padding: 0.5rem;
+  border-bottom: 0.1px solid rgb(231, 229, 229);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rightItems {
+  margin-top: 1.5rem;
+  border-top: 2px solid rgb(183, 179, 179);
+}
+.parasx {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #757575;
+  font-family: Inter;
+  font-size: 10px;
+  padding: 0 5px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.icon {
+  height: 1.4rem;
+  width: 1.4rem;
+  color: #3d3d3d;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.avatar {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+.editbox,
+.sidebarright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pencil {
+  height: 1.3rem;
+  width: 1.3rem;
+  color: gray;
+}
+.edittext {
+  font-size: 1rem;
+  color: gray;
+  font-weight: 500;
+}
+.editbox {
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+.mid {
+  width: 100%;
+}
+nav {
+  position: fixed;
+  top: 0px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 30px;
+  width: calc(100% - 270px);
+  margin-right: 125px;
+  margin-left: 130px;
+  height: 60px;
+  z-index: 10;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+nav p {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.jobscontainer {
+  margin-top: 5rem;
+  padding: 1rem;
+  width: calc(100% - 250px);
+  box-sizing: border-box;
+  margin-right: 125px;
+  margin-left: 130px;
+}
+.jobsheading {
+  text-align: center;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  position: relative;
+}
+
+.jobsheading::after {
+  content: "";
+  position: absolute;
+  left: 45%;
+  top: 30px;
+  height: 1px;
+  width: 120px;
+  background-color: #3522e2;
+}
+.inputcontainer {
+  display: flex;
+  align-items: center;
+  border: 0.1px solid rgb(215, 213, 213);
+  width: fit-content;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.2rem;
+}
+.input {
+  border: none;
+  outline: none;
+  padding: 0;
+  /* border-right: 0.1px solid gray; */
+}
+.inputcontainer svg {
+  margin-bottom: 0;
+}
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.jobs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.jobcard {
+  border: 0.1px solid rgb(211, 207, 207);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.jobcardinfo {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.jobcardinfo img {
+  height: 3rem;
+  width: 2rem;
+}
+.jobcardinfo p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+  color: #8b8b8b;
+  margin-top: 0;
+}
+.jobcardinfo h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #3d3d3d;
+  font-weight: 400;
+  margin: 0;
+}
+.location {
+  color: #000 !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  margin-top: 2px !important;
+}
+.jobcardcontent {
+  margin-top: 3rem;
+}
+.descriptionheading {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #323232;
+}
+.description {
+  font-size: 0.85rem;
+  font-weight: 400;
+}
